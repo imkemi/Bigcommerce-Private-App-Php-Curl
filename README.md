@@ -21,6 +21,7 @@ To connect to the API with OAuth you will need the following:
 Configuration
 -------------------------
 Provide your credentials to the static configuration hook to prepare the API client for connecting to a store on the Bigcommerce platform: 
+
          $api_url = 'https://your_store.mybigcommerce.com/api/v2/products.json';
          
          $ch = curl_init(); curl_setopt( $ch, CURLOPT_URL, $api_url ); 
