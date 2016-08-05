@@ -22,10 +22,17 @@ Configuration
 -------------------------
 Provide your credentials to the static configuration hook to prepare the API client for connecting to a store on the Bigcommerce platform: 
          $api_url = 'https://your_store.mybigcommerce.com/api/v2/products.json';
+         
          $ch = curl_init(); curl_setopt( $ch, CURLOPT_URL, $api_url ); 
-         curl_setopt( $ch, CURLOPT_HTTPHEADER, array ('Accept: application/json', 'Content-Length: 0') );                      
+         
+         curl_setopt( $ch, CURLOPT_HTTPHEADER, array ('Accept: application/json', 'Content-Length: 0') );     
+         
          curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'GET'); 
+         
          curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 ); 
+         
          curl_setopt( $ch, CURLOPT_USERPWD, "user_name:secret_key" ); 
+         
          curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );
+         
          curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );  
